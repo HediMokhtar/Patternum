@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="basic.css">
+    <title>Split your parameters</title>
+</head>
+
+<body>
+
+<h1> Symptome de votre AntiPattern </h1>
+
+Votre méthode posséde plus de 3 parametres.
+
+<h1> Pourquoi ce problème est apparu ? </h1>
+
+Une longue liste de paramètres peut se produire après que plusieurs types d'algorithmes aient fusionnés dans une seule méthode. Une longue liste peut avoir été créée pour contrôler quel algorithme sera exécuté et comment.
+
+Les listes de paramètres longs peuvent également être le sous-produit des efforts visant à rendre les classes plus indépendantes les unes des autres. Par exemple, le code pour créer des objets spécifiques nécessaires dans une méthode a été déplacé de la méthode au code d'appel de la méthode, mais les objets créés sont transmis à la méthode en tant que paramètres. Ainsi, la classe originale ne connaît plus les relations entre les objets, et la dépendance a diminué. Mais si plusieurs de ces objets sont créés, chacun d'entre eux nécessitera son propre paramètre, ce qui signifie une liste de paramètres plus longue.
+
+Il est difficile de comprendre ces listes, qui deviennent contradictoires et difficiles à utiliser à mesure qu'ils grandissent. Au lieu d'une longue liste de paramètres, une méthode peut utiliser les données de son propre objet. Si l'objet actuel ne contient pas toutes les données nécessaires, un autre objet (qui obtiendra les données nécessaires) peut être transmis en tant que paramètre de méthode.
+
+<h1> Traitement</h1>
+
+<ul>
+
+    <li>
+        Vérifiez les valeurs transmises aux paramètres. Si certains des arguments ne sont que des résultats d'appels de méthode d'un autre objet, remplacer le paramètre par des appels de méthode. Cet objet peut être placé dans le champ de sa propre classe ou passé comme paramètre de méthode.
+    </li>
+    <li>
+        Au lieu de transmettre un groupe de données reçues à partir d'un autre objet en tant que paramètres, passez l'objet lui-même à la méthode, en preservant l'entier.
+    </li>
+    <li>
+        S'il existe plusieurs éléments de données non liés, vous pouvez parfois les fusionner en un seul objet de paramètre.
+    </li>
+</ul>
+
+</ul>
+
+<h1> Résultats </h1>
+
+<ul>
+
+    <li>
+        Code plus lisible et plus court.
+    </li>
+    <li>
+        Ce refactoring peut aider à réveler du code dupliqué.
+    </li>
+</ul>
+</body>
+</html>

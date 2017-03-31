@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="basic.css">
+    <title>Spaghettie to Penne</title>
+</head>
+
+<body>
+
+<h1> Contexte </h1>
+
+Le Spaghetti Code AntiPattern est le classique et le plus célèbre AntiPattern; Il a existé sous une forme ou une autre depuis l'invention des langages de programmation. Les langages non orientés objet semblent être plus sensibles à ce AntiPattern, mais il est assez fréquent chez les développeurs qui n'ont pas encore complètement maîtrisé les concepts avancés sous-jacents à l'orientation des objets.
+<h1> Symptomes</h1>
+
+Après l'extraction du code, seules les parties de l'objet et des méthodes semblent appropriées pour être réutilisées. Le Code de Spaghetti minier peut souvent être un mauvais retour sur investissement; Cela devrait être pris en compte avant qu'une décision de la mine soit prise.
+Les méthodes sont très axées sur les processus; Souvent, en fait, les objets sont nommés comme des processus.
+Le flux d'exécution est dicté par la mise en œuvre d'objet, pas par les clients des objets.
+Des relations minimes existent entre les objets.
+De nombreuses méthodes d'objet n'ont pas de paramètres et utilisent des variables de classe ou globales pour le traitement.
+Le mode d'utilisation des objets est très prévisible.
+Code est difficile à réutiliser, et quand il est, c'est souvent par le biais du clonage. Dans de nombreux cas, cependant, le code n'est jamais considéré pour la réutilisation.
+Les talents orientés objet de l'industrie sont difficiles à retenir.
+Les avantages de l'orientation de l'objet sont perdus; L'héritage n'est pas utilisé pour étendre le système; Polymorphisme n'est pas utilisé.
+Les efforts de maintenance de suivi contribuent au problème.
+Le logiciel atteint rapidement un point de rendement décroissant; L'effort impliqué dans le maintien d'une base de code existante est supérieur au coût de développement d'une nouvelle solution à partir de la base.
+<h1> Traitements </h1>
+
+
+Software refactoring (or code cleanup) is an essential part of software development Seventy percent or more of software cost is due to extensions, so it is critical to maintain a coherent software structure that supports extension.
+
+When the structure becomes compromised through supporting unanticipated requirements, the ability of the code to support extensions becomes limited, and eventually, nonexistent. Unfortunately, the term "code cleanup" does not appeal to pointy-haired managers, so it may be best to discuss this issue using an alternative term such as "software investment."
+
+After all, in a very real sense, code cleanup is the maintenance of software investment. Well-structured code will have a longer life cycle and be better able to support changes in the business and underlying technology.
+
+Ideally, code cleanup should be a natural part of the development process. As each feature (or group of features) is added to the code, code cleanup should follow what restores or improves the code structure. This can occur on an hourly or daily basis, depending on the frequency of the addition of new features.
+
+Code cleanup also supports performance enhancement. Typically, performance optimization follows the 90/10 rule, where only 10 percent of the code needs modification in order to achieve 90 percent of the optimal performance. For single-subsystem or application programming, performance optimization often involves compromises to code structure.
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="basic.css">
+    <title>Fight the blob</title>
+</head>
+
+<body>
+
+<h1> Contexte </h1>
+
+Vous souvenez-vous du film original en noir et blanc The Blob? Vous n'avez peut-être vu que le remake récent. Dans les deux cas, la ligne de l'histoire était presque la même: une forme de vie extraterrestre, semblable à une goutte, semblable à une gélatine provenant de l'espace extra-atmosphérique, le fait quelque part sur Terre.
+
+Chaque fois que la chose gelée mange (habituellement terriens unsuspecting), il pousse. Pendant ce temps, les terreurs incrédules panique et ignorer le scientifique un fou qui sait ce qui se passe. Beaucoup plus de gens sont mangés avant qu'ils viennent à leurs sens. Finalement, la Blob devient si grande qu'elle menace d'effacer la planète entière.
+
+Le film est une bonne analogie pour le Blob AntiPattern, qui a été connu pour consommer des architectures orientées objet entières.
+
+<h1> Symptomes</h1>
+
+Classe unique avec un grand nombre d'attributs, d'opérations ou les deux. Une classe avec 60 ou plus d'attributs et d'opérations indique habituellement la présence du bloc
+Une collection disparate d'attributs et d'opérations non reliés encapsulés dans une seule classe. Un manque global de cohérence des attributs et des opérations est typique de la Blob.
+Une seule classe de contrôleur avec des classes d'objet de données simples associées.
+Une absence de conception orientée objet. Une boucle principale du programme à l'intérieur de la classe Blob associée à des objets de données relativement passifs. La classe contrôleur unique souvent encapsule presque toutes les fonctionnalités de l'application, tout comme un programme principal procédural.
+Une conception de legs héritée qui n'a pas été correctement refactorisée dans une architecture orientée objet.
+Le Blob compromet les avantages inhérents d'une conception orientée objet. Par exemple, The Blob limite la possibilité de modifier le système sans affecter la fonctionnalité d'autres objets encapsulés. Modifications à la Blob affectent le logiciel étendu dans l'encapsulation Blob. Les modifications apportées à d'autres objets du système sont également susceptibles d'avoir un impact sur le logiciel de Blob.
+La classe Blob est généralement trop complexe pour être réutilisée et testée. Il peut être inefficace, ou introduire une complexité excessive pour réutiliser le Blob pour les sous-ensembles de sa fonctionnalité.
+La classe Blob peut être coûteuse à charger en mémoire, en utilisant des ressources excessives, même pour des opérations simples.
+
+<h1> Traitements </h1>
+
+Comme avec la plupart des AntiPatterns dans cette section, la solution implique une forme de refactoring. La clé est de déplacer le comportement loin de la Blob. Il peut être approprié de réaffecter le comportement à certains des objets de données encapsulés d'une manière qui rend ces objets plus capables et le Blob moins complexe.
+
+</body>
+</html>
